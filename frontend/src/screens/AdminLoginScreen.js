@@ -2,27 +2,46 @@
 import React, { useState, useEffect } from 'react'
 
 import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
+
+
+  
 
 import FormContainer from '../components/FormContainer'
 import Message from '../components/Message'
 
-const AdminLoginScreen = () => {
+const AdminLoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
   const [message, setMessage] = useState(null)
+  const redirect = location.search ? location.search.split('=')[1] : '/'
+
+  useEffect(
+		() => {
+			
+				if(email && password)
+        {
+          history.push(redirect)
+        }
+			
+		},
+		[history, redirect] 
+	)
+
   const submitHandler = (e) => {
 		e.preventDefault()
 		 
-		// if(!email=="" && !password=="")
-    // {
-    //   document.location.href="/adminsection"
-    // }
-    // else{
-    //   setMessage("All Fields are required")
-    // }
-    document.location.href="/adminsection"
+		if(!email=="" && !password=="")
+    {
+        
+    }
+    else{
+      setMessage("All Fields are required")
+    }
+    
 	}
+
   return (
     <FormContainer>
     <h1>Admin Sign In</h1>
@@ -50,9 +69,12 @@ const AdminLoginScreen = () => {
         ></Form.Control>
       </Form.Group>
       {/* Button */}
-      <Button type='submit' variant='primary'>
+      <Link to={email.length>0 && password.length>0?"/adminsection":"/admin"}>
+      <Button  type='submit' variant='primary'>
         Sign In
       </Button>
+      </Link>
+     
     </Form>
     
    

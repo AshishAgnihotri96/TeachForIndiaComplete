@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import {
 	USER_LOGIN_REQUEST,
 	USER_LOGIN_SUCCESS,
@@ -65,12 +66,14 @@ export const login = (email, password) => async (dispatch) => {
 }
 // Actions to logout
 export const logout = () => (dispatch) => {
+	
 	localStorage.removeItem('userInfo')
 
 	dispatch({ type: USER_LOGOUT })
 	
 	dispatch({ type: USER_LIST_RESET })
-	document.location.href = '/login'
+	
+	
 }
 // Actions to register
 export const register = (name, email, password,contact_information,user_location,spoken_languages,availability) => async (dispatch) => {

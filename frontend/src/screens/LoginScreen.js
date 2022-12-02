@@ -72,7 +72,7 @@ const LoginScreen = ({ location, history }) => {
 			{/* Register */}
 			<Row className='py-3'>
 				<Col>
-					New Customer?{' '}
+					New Volunteer?{' '}
 					<Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
 						Register
 					</Link>

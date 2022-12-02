@@ -7,11 +7,7 @@ import ProductCarousel from '../components/ProductCarousel'
 
 
 const HomeScreen = ({ match }) => {
-	
-	
-	
-	
-	
+
 		
 	return (
 		<>	

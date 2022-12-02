@@ -1,0 +1,118 @@
+main {
+	background-color: #e8e8e8;
+	min-height: 70vh;
+}
+h1 {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	padding: 1rem 0;
+}
+.App{
+	width: 100%;
+}
+h2 {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	padding: 0.5rem;
+}
+h3 {
+	padding: 1rem 0;
+}
+
+.rating span {
+	margin: 0.1rem;
+}
+a {
+	color: #000;
+}
+.plus-sign-margin {
+	margin: 0.4rem;
+}
+.push-to-right {
+	margin-left: 0.6rem;
+}
+
+.melvin-kisten {
+	color: #000;
+	margin-right: 0.4rem;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+	
+	display: flex;
+}
+.carousel-caption {
+	position: absolute;
+	top: 0;
+}
+.nav-main{
+	background-color: rgb(172, 165, 165);
+	color: black;
+}
+
+body{
+	background-color: rgb(172, 165, 165);
+}
+.headers{
+	
+	width: 100%;
+	
+}
+
+.carousel img {
+	height: 500px;
+	 
+	margin: auto;
+	
+	
+}
+.lang_inp{
+	height: 40px;
+	width: 80px;
+}
+.btn-work {
+	font-size: 10px;
+    
+	
+    background-color: red;
+    justify-items: center;
+	align-content: center;
+}
+@media (max-width: 900px) {
+	.carousel-caption h2 {
+		font-size: 2.5vw;
+	}
+}
+.img-wrapper {
+	position: relative;
+	width: 100%;
+   }
+  
+  .img-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+  }
+  
+  .img-overlay:before {
+	content: ' ';
+	display: block;
+	/* adjust 'height' to position overlay content vertically */
+	height: 50%;
+  }
+
+  .visibleNow{
+	visibility: visible;
+	color: red;
+	font-size: 12px;
+  }
+
+  .mess{
+	color: red;
+  }
